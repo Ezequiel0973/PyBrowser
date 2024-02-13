@@ -6,7 +6,7 @@ As an alternative to Selenium-based applications, PyBrowser would allow for an e
 tasks done in web browsers by providing tools for adding python scripts to its core. PyBrowser is supposed
 to be highly customizable and easy to manipulate.
 
-The present version of PyBrowser is merely a sketch of what is to come, but its already fully functional
+The present version of PyBrowser is merely a sketch of what is to come, but it is already fully functional
 as a regular web browser, just in case you want to play with it.
 
 # License
