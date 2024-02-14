@@ -7,7 +7,10 @@ tasks done in web browsers by providing tools for adding python scripts to its c
 to be highly customizable and easy to manipulate.
 
 The present version of PyBrowser is merely a sketch of what is to come, but it is already fully functional
-as a regular web browser, just in case you want to play with it.
+as a regular web browser, just in case you want to play with it. After installing the required packages,
+start the browser through the following command:
+
+python -m PyBrowser
 
 # License
 

@@ -3,6 +3,8 @@ from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtCore import Qt, QUrl
 
+current_directory = __file__[:-17]
+
 
 class BrowserWindow(QTabWidget):
 
@@ -17,7 +19,7 @@ class BrowserWindow(QTabWidget):
         # Configure tab closing buttons
         self.setTabsClosable(True)
         self.tabCloseRequested.connect(self.close_tab)
-        self.setStyleSheet('QTabBar::close-button {image: url(icons/close.png);}')
+        self.setStyleSheet('QTabBar::close-button {image: url(' + current_directory + 'icons/close.png);}')
 
         # Configure first tab
         self.addTab(self.BrowserTab(self), 'New Tab')
@@ -67,9 +69,9 @@ class BrowserWindow(QTabWidget):
             layout.addWidget(self.web_view)
 
             # Configure tool bar buttons and url bar
-            return_button = self.ToolBarButton('icons/arrow_left.png', self.web_view.back)
-            go_button = self.ToolBarButton('icons/arrow_right.png', self.web_view.forward)
-            refresh_button = self.ToolBarButton('icons/refresh.png', self.web_view.reload)
+            return_button = self.ToolBarButton(current_directory + 'icons/arrow_left.png', self.web_view.back)
+            go_button = self.ToolBarButton(current_directory + 'icons/arrow_right.png', self.web_view.forward)
+            refresh_button = self.ToolBarButton(current_directory + 'icons/refresh.png', self.web_view.reload)
 
             menu_button = self.MenuButton(self)
 
@@ -115,7 +117,7 @@ class BrowserWindow(QTabWidget):
 
                 # Set button style
                 self.setStyleSheet('border: 0px solid white')
-                self.setIcon(QIcon('icons/menu.png'))
+                self.setIcon(QIcon(current_directory + 'icons/menu.png'))
 
                 # Create a QMenu and add actions
                 menu = QMenu(self)
