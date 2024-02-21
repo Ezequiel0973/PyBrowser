@@ -89,8 +89,8 @@ class BrowserWindow(QTabWidget):
         def navigate(self, url):
 
             # Add 'http://' to the url if not present
-            if not url.startswith("http://"):
-                url = "http://" + url
+            if not url.startswith("http"):
+                url = "https://" + url
                 self.url_bar.setText(url)
 
             # Update url in respective url bar
@@ -147,7 +147,7 @@ class BrowserWindow(QTabWidget):
             def keyPressEvent(self, event):
                 super().keyPressEvent(event)
 
-                # Call navigate method from parent BrowserWindow if Enter/Return is pressed
+                # Call navigate method from parent BrowserTab if Enter/Return is pressed
                 key = event.key()
                 if key == Qt.Key.Key_Enter or key == Qt.Key.Key_Return:
                     self.browser_tab.navigate(self.text())
