@@ -24,3 +24,5 @@ PyQt6-Qt6==6.6.1
 PyQt6-sip==13.6.0
 PyQt6-WebEngine==6.6.0
 PyQt6-WebEngine-Qt6==6.6.1
+
+Obs: simply do "pip install PyQt6 PyQt6-WebEngine"
